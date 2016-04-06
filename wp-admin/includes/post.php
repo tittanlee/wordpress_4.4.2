@@ -595,8 +595,18 @@ function get_default_post_to_edit( $post_type = 'post', $create_in_db = false ) 
 		$post_excerpt = esc_html( wp_unslash( $_REQUEST['excerpt'] ));
 
 	if ( $create_in_db ) {
-		$post_id = wp_insert_post( array( 'post_title' => __( 'Auto Draft' ), 'post_type' => $post_type, 'post_status' => 'auto-draft' ) );
-		$post = get_post( $post_id );
+		//$post_id = wp_insert_post( array( 'post_title' => __( 'Auto Draft' ), 'post_type' => $post_type, 'post_status' => 'auto-draft' ) );
+		//$post = get_post( $post_id );
+		
+		global $current_user,$wpdb;
+		$post = $wpdb->get_row( "SELECT * FROM $wpdb->posts WHERE post_status = 'auto-draft' AND post_type = '$post_type' AND post_author = $current_user->ID ORDER BY ID ASC LIMIT 1" );
+		if (!($post) ) {
+			$post_id = wp_insert_post( array( 'post_title' => __( 'Auto Draft' ), 'post_type' => $post_type, 'post_status' => 'auto-draft' ) );
+			$post = get_post( $post_id );
+		}
+
+
+
 		if ( current_theme_supports( 'post-formats' ) && post_type_supports( $post->post_type, 'post-formats' ) && get_option( 'default_post_format' ) )
 			set_post_format( $post, get_option( 'default_post_format' ) );
 	} else {

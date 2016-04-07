@@ -1,0 +1,82 @@
+/*
+	Theme Name: DUX - weiton
+	Description: 本主題由微通（stardiy.Com）分享，若有疑問可以前往<a href="http://stardiy.com">微通</a>尋求幫助，也可以加入微通QQ：841156600。
+	Theme URI: http://stardiy.com
+	Author: 明星DIY（stardiy.Com）分享
+	Author URI: http://stardiy.com
+	Version: 1.3
+*/
+
+@media (max-width: 800px) {
+ .to-tip {display:none !important}
+}
+.to-tip {
+ background:#fff;
+ text-align:center
+}
+.to-tip .inner {
+ display:inline-block;
+ margin-bottom:40px;
+}
+.to-tip .top-tip-shap {
+ border-radius:100%
+}
+.to-tip a {
+ display:block;
+ width:60px;
+ height:60px;
+ border:1px solid #eee;
+ border-radius:100%;
+ line-height:58px;
+ color:#999;
+ font-size:24px;
+ background:#fff;
+ position:relative
+}
+.to-tip a:hover .code {
+ display:block
+}
+.to-tip div {
+ color:#666;
+ margin-top:4px
+}
+.to-tip .code {
+ position:absolute;
+ padding:20px;
+ border:1px solid #e6e6e6;
+ background-color:#fff;
+ line-height:14px;
+ width:160px;
+ height:170px;
+ top:-200px;
+ left:50%;
+ -webkit-transform:translate3d(-50%, 0, 0);
+ transform:translate3d(-50%, 0, 0);
+ display:none
+}
+.to-tip .code:before,.to-tip .code:after {
+ position:absolute;
+ content:"";
+ border:10px solid transparent
+}
+.to-tip .code:before {
+ border-top-color:#e6e6e6;
+ left:50%;
+ margin-left:-10px;
+ bottom:-20px
+}
+.to-tip .code:after {
+ border-top-color:#fff;
+ left:50%;
+ margin-left:-10px;
+ bottom:-19px
+}
+.to-tip .code img {
+ width:120px;
+ height:120px
+}
+.to-tip .code b {
+ color:#333;
+ font-size:12px;
+ font-weight:normal
+}

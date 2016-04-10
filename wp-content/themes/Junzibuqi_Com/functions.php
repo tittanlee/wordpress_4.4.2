@@ -284,6 +284,17 @@ add_filter('pre_option_link_manager_enabled','__return_true');
 /*輸出縮略圖*/
 function _get_post_thumbnail() {
 	global $post;
+  $thumbnail_path = "wp-content/img/$post->ID/thumb.jpg";
+
+  if ( file_exists($thumbnail_path)) {
+       echo '<img data-src="/wp/'.$thumbnail_path.'" class="thumb">';
+      //echo '<img data-src= "/wp/wp-content/img/'.$post->ID.'/thumb.jpg" class="thumb">';
+  } else {
+      //如果文章沒有圖片則讀取默認圖片
+      echo '<img data-src="' . get_stylesheet_directory_uri() . '"/img/thumbnail.png" class="thumb">';
+  }
+	/*
+	global $post;
 	if (has_post_thumbnail ()) {
 		//如果存在縮略圖
 		$domsxe = simplexml_load_string ( get_the_post_thumbnail () );
@@ -301,7 +312,7 @@ function _get_post_thumbnail() {
 			//如果文章沒有圖片則讀取默認圖片
 			echo '<img data-src="' . get_stylesheet_directory_uri() . '"/img/thumbnail.png" class="thumb">';
 		}
-	}
+	} */
 }
 
 function post_thumbnail( $width = 100,$height = 80 ){

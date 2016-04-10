@@ -191,7 +191,7 @@ body{background-color: #f6f6f6;position: relative;/*margin-top: 79px;*/}
 .pads a:hover time{color: #fff;}
 /* article content ======================================================================================================== */
 .article-header{margin-bottom: 20px;padding: 25px 0;border-bottom: 1px solid #eee;text-align: center;}
-.article-title{margin-top: 0;font-size: 26px;line-height: 36px;}
+.article-title{margin-top: 0;font-size: 28px;line-height: 36px;font-family:'MicrosoftYaHeiLight','Microsoft YaHei Light','Microsoft YaHei';}
 .article-title a,
 .article-title a:hover{color: #555;}
 .article-meta{font-size: 12px;color: #999;}
@@ -226,6 +226,7 @@ body{background-color: #f6f6f6;position: relative;/*margin-top: 79px;*/}
 .article-content pre,.comment pre{margin:20px 0;font:12px/20px 'courier new';background:#272822;padding:10px 15px;color:#F8F8D4;border:none}
 .article-content blockquote{margin: 30px 30px;padding: 15px 20px 1px;font-size: 16px;color: #999;border-left: 5px solid #EEE;}
 .article-content blockquote p{margin:0;padding:0;margin-bottom: 10px;}
+.article-content iframe {margin:0 auto; display:block;max-width:100%;height:auto;transition:all 1.2s;-moz-transition:all 1.2s;-webkit-transition:all 1.2s;-o-transition:all 1.2s;border-radius:8px;}
 .p_indent .article-content p{text-indent: 30px;}
 .post-copyright{background-color: #eee;padding-right: 30px;font-size: 12px;padding: 3px 0;border-radius: 3px;color: #aaa;text-align: center;}
 .article-content .post-copyright a, .post-copyright a:hover{color: #aaa;text-decoration: none;}

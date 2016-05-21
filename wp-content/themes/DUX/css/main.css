@@ -381,6 +381,7 @@ body{
 	width: 220px;
 }
 .excerpt .thumb{
+  border-radius: 8px;
 	width: 220px;
 	height: 150px;
 }
@@ -572,7 +573,7 @@ body{
 .article-content table td,.article-content table th{border-bottom:solid 1px #ddd;border-right:solid 1px #ddd;padding:5px 10px}
 .article-content .alignnone{margin:0 auto;}
 .article-content .alignleft{float:left;text-align:left;margin-right:10px}
-.article-content .aligncenter{margin: 0 auto;text-align: center;display: block;}
+.article-content .aligncenter{margin: 0 auto;text-align: center;display: block; border-radius: 10px;}
 .article-content .alignright{float:right;text-align:right;margin-left:10px}
 .article-content .wp-caption{margin-bottom: 18px;background-color: #f6f6f6;padding: 10px 10px 1px;max-width: 100%}
 .article-content .wp-caption img{margin: 0 0 5px;}

@@ -444,7 +444,22 @@ function _new_strlen($str,$charset='utf-8') {
     return $n;
 }
 
+
 function _get_post_thumbnail($size = 'thumbnail', $class = 'thumb') {
+	global $post;
+	$html = '';
+  
+  $thumbnail_path = "wp-content/img/$post->ID/thumb.jpg";
+
+  if ( file_exists($thumbnail_path)) {
+      $html = '<img data-src="/wp/'.$thumbnail_path.'" class="thumb" src="/wp/'.$thumbnail_path.'" style="display: inline;">';
+  } else {
+      //如果文章沒有圖片則讀取默認圖片
+      $html =  '<img data-src="' . get_stylesheet_directory_uri() . '"/img/thumbnail.png" class="thumb">';
+  }
+  return $html;
+
+/*
 	global $post;
 
 	$issrc = _hui('thumbnail_src');
@@ -458,6 +473,7 @@ function _get_post_thumbnail($size = 'thumbnail', $class = 'thumb') {
 		$src_array = wp_get_attachment_image_src(_get_attachment_id_from_src($src), $size);
 		$html = sprintf('<img data-src="%s" class="%s"/>', $src_array[0], $class);*/
 
+/*
         $domsxe = get_the_post_thumbnail();
         // print_r($domsxe);
         preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $domsxe, $strResult, PREG_PATTERN_ORDER);  
@@ -479,9 +495,10 @@ function _get_post_thumbnail($size = 'thumbnail', $class = 'thumb') {
         }
 		
 	}
-
 	return $html;
+*/
 }
+
 
 function _get_attachment_id_from_src($link) {
 	global $wpdb;

@@ -29,37 +29,7 @@
 				<li class="navto-search"><a href="javascript:;" class="search-show active"><i class="fa fa-search"></i></a></li>
 			<?php } ?>
 		</ul>
-		<div class="topbar">
-			<ul class="site-nav topmenu">
-				<?php _the_menu('topmenu') ?>
-				<li class="menusns">
-					<a href="javascript:;">關注本站 <i class="fa fa-angle-down"></i></a>
-					<ul class="sub-menu">
-						<?php if(_hui('wechat')){ echo '<li><a class="sns-wechat" href="javascript:;" title="'.__('關注', 'haoui').'」'._hui('wechat').'「" data-src="'._hui('wechat_qr').'"><i class="fa fa-wechat"></i> 微信</a></li>'; } ?>
-						<?php if(_hui('weibo')){ echo '<li><a target="_blank" rel="external nofollow" href="'._hui('weibo').'"><i class="fa fa-weibo"></i> 微博</a></li>'; } ?>
-						<?php if(_hui('tqq')){ echo '<li><a target="_blank" rel="external nofollow" href="'._hui('tqq').'"><i class="fa fa-tencent-weibo"></i> 騰訊微博</a></li>'; } ?>
-						<?php if(_hui('twitter')){ echo '<li><a target="_blank" rel="external nofollow" href="'._hui('twitter').'"><i class="fa fa-twitter"></i> Twitter</a></li>'; } ?>
-						<?php if(_hui('facebook')){ echo '<li><a target="_blank" rel="external nofollow" href="'._hui('facebook').'"><i class="fa fa-facebook"></i> Facebook</a></li>'; } ?>
-						<?php if(_hui('feed')){ echo '<li><a target="_blank" href="'._hui('feed').'"><i class="fa fa-rss"></i> RSS訂閱</a></li>'; } ?>
-					</ul>
-				</li>
-			</ul>
-			<?php if( is_user_logged_in() ): global $current_user; ?>
-				<?php _moloader('mo_get_user_page', false) ?>
-				Hi, <?php echo $current_user->display_name ?>
-				&nbsp; &nbsp; <a href="<?php echo mo_get_user_page() ?>">進入會員中心</a>
-				<?php if( is_super_admin() ){ ?>
-				&nbsp; &nbsp; <a target="_blank" href="<?php echo site_url('/wp-admin/') ?>">後台管理</a>
-				<?php } ?>
-			<?php else: ?>
-				<?php _moloader('mo_get_user_rp', false) ?>
-				<a href="javascript:;" class="signin-loader">Hi, 請登錄</a>
-				&nbsp; &nbsp; <a href="javascript:;" class="signup-loader">我要註冊</a>
-				&nbsp; &nbsp; <a href="<?php echo mo_get_user_rp() ?>">找回密碼</a>
-			<?php endif; ?>
-		</div>
-		<i class="fa fa-bars m-icon-nav"></i>
-	</div>
+</div>
 </header>
 <div class="site-search">
 	<div class="container">

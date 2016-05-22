@@ -54,7 +54,7 @@ body{
 	right: 0;
 	z-index: 9;
 	background-color: #fff;
-	padding: 55px 0 20px;
+	padding: 30px 0 30px;
 	margin-bottom: 15px;
 	border-bottom: 1px solid #EAEAEA;
 	/*box-shadow: 0 1px 4px rgba(0,0,0,.05);*/
@@ -361,7 +361,7 @@ body{
 
 .excerpt{
 	border: 1px solid #eaeaea;
-	padding: 20px 20px 20px 255px;
+	padding: 10px 10px 10px 255px;
 	overflow: hidden;
 	background-color: #fff;
 	margin-bottom: -1px;
@@ -383,7 +383,7 @@ body{
 .excerpt .thumb{
   border-radius: 8px;
 	width: 220px;
-	height: 150px;
+	height: 160px;
 }
 .excerpt header{
 	margin-bottom: 10px;
@@ -2302,3 +2302,7 @@ pre.prettyprint.linenums ol li {
 	#navs .item li{width: 49%;}
 }
 
+
+.gengduo{font-size: 12px;text-align: center;display: inline-block;padding: 5px 14px;background-color: #fff;border: 1px solid #ddd;border-radius: 15px;margin: 0 25%;width: 50%;}
+.gengduo:hover{background-color: #ee6666; color: #fff !important;}
+.gengduo:hover a{color: #fff;}

@@ -45,7 +45,7 @@ while ( have_posts() ) : the_post();
 
 
         echo '</p>';
-        echo '<p class="note">'._get_excerpt().'</p>';
+        echo '<p class="note">'.get_the_excerpt().'';
         if( _hui('post_link_excerpt_s') ) _moloader('mo_post_link');
     echo '</article>';
 
